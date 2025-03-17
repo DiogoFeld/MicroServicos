@@ -1,6 +1,7 @@
 using AutoMapper;
 using GeekShopping.ProductAPI.Config;
 using GeekShopping.ProductAPI.Models.Context;
+using GeekShopping.ProductAPI.RabbitMQSender;
 using GeekShopping.ProductAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,7 +23,9 @@ namespace GeekShopping.ProductAPI
 
             // Add services to the container.
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            builder.Services.AddSingleton(mapper);            
+            builder.Services.AddSingleton(mapper);
+            builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
