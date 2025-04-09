@@ -23,9 +23,6 @@ namespace GeekShopping.ProductAPI.Controllers
             RequestMensagerryVO request = new RequestMensagerryVO(requestMensagerryModel);
             _rabbitMQMessageSender.SendMessage(request, "requestForMenssagery");
 
-
-
-
             return true;
         }
         //implement mensagery client
