@@ -27,7 +27,8 @@ namespace GeekShopping.ProductAPI.RabbitMQSender
             {
                 HostName = _hostName,
                 UserName = _userName,
-                Password = _password
+                Password = _password,
+                Port = 5672          
             };
             _connection = factory.CreateConnection();
 
