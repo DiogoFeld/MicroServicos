@@ -63,5 +63,11 @@ namespace GeekShopping.ProductAPI.RabbitMqConsumer
 
 
 
+
+
+
+
+
+
     }
 }
