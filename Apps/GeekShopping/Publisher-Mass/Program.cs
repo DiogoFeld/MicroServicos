@@ -1,4 +1,5 @@
 using MassTransit;
+using System.Reflection;
 
 namespace Publisher_Mass
 {
@@ -14,6 +15,14 @@ namespace Publisher_Mass
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Register MediatR
+            var assemblies = new Assembly[]
+            {
+                Assembly.GetExecutingAssembly(),
+                typeof(ProcessConsumerTesterHandler).Assembly                
+            };
+
 
 
             builder.Services.AddMassTransit(x =>

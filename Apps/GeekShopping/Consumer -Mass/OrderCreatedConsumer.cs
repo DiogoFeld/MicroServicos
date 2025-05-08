@@ -9,7 +9,7 @@ namespace Consumer__Mass
         {
             var objectResult = context.Message;
 
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }

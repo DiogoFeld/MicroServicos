@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Queries\" />
-    <Folder Include="Handler\" />
-    <Folder Include="Consumer\" />
-    <Folder Include="Command\" />
   </ItemGroup>
 
 </Project>
